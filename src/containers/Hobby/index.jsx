@@ -38,7 +38,7 @@ const Hobby = (props) => {
       <Provider value={{ deleteHobby }}>
         <List todos={items}></List>
       </Provider>
-      <Footer todos={items}></Footer>
+      <Footer todos={items} deleteHobby={deleteHobby}></Footer>
       <Detail></Detail>
     </div>
   )

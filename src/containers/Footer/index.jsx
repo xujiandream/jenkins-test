@@ -15,8 +15,10 @@ const Footer = (props) => {
     items,
     checkAllItem,
     cancelAllCheckItem,
-    updateCheckItem
+    updateCheckItem,
+    deleteHobby
   } = props
+  
   console.log("Footer--items:", items.length, "checkedItemsArry", checkedItemsArry.length);
   const footerRef = useRef()
   footerRef.current = { isChecked: false, btnDisabled: true }
@@ -24,9 +26,11 @@ const Footer = (props) => {
   // 删除所有选中项
   const deleteAllCheckedItems = useCallback(
     () => {
-
+      const deitems = items.filter(parentItem => !(checkedItemsArry.includes(parentItem)))
+      deleteHobby(deitems)
+      cancelAllCheckItem([])
     },
-    []
+    [items,checkedItemsArry,deleteHobby,cancelAllCheckItem]
   )
   // 全选框状态发生变化时进行数据增删操作
   const checkChange = useCallback(
@@ -40,7 +44,6 @@ const Footer = (props) => {
     [checkAllItem, cancelAllCheckItem, items]
   )
   // 控制全选按钮状态
-
   if (checkedItemsArry.length === items.length) {
     isChecked = true
   } else {
