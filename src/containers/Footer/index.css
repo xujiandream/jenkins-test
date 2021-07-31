@@ -1,0 +1,11 @@
+.footer{
+  background-color: plum;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.delAllBox{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
