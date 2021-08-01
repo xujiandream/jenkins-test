@@ -19,7 +19,9 @@ export default function Detail(props) {
   )
   return (
     <div className='detail'>
-      {state}
+      <span className='content'>
+        {state}
+      </span>
       <span>
         <Button onClick={goForward}>前进</Button>
         <Button onClick={goBack}>后退</Button>

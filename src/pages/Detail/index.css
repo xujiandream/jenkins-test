@@ -3,4 +3,9 @@
   background-color: rgb(172, 238, 117);
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.content{
+  line-height: 100%;
+  text-align: center;
 }
