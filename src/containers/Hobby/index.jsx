@@ -2,6 +2,7 @@
 import { addItem, deleteItem } from '../../redux/actions/hobby'
 //引入connect用于连接UI组件与redux
 import { connect } from 'react-redux'
+import { Route , Switch, Redirect } from 'react-router-dom'
 /* ******定义UI组件(App组件)****** */
 import React, { useCallback } from 'react'
 import './index.css'
@@ -10,8 +11,8 @@ import { ItemContext } from '../../context'
 import Header from '../../components/Header'
 import Footer from '../Footer'
 import List from '../../components/List'
-import Detail from '../../components/Detail'
-
+import Detail from '../../pages/Detail'
+import Frontpage from '../../pages/Frontpage'
 const Hobby = (props) => {
   console.log('Hobby--执行了');
   const { addItem, deleteItem, items } = props
@@ -39,7 +40,12 @@ const Hobby = (props) => {
         <List todos={items}></List>
       </Provider>
       <Footer todos={items} deleteHobby={deleteHobby}></Footer>
-      <Detail></Detail>
+      <br />
+      <Switch>
+        <Route path='/frontPage' component={Frontpage} />
+        <Route path='/test' component={Detail} />
+        <Redirect to="/frontPage"/>
+      </Switch>
     </div>
   )
 }

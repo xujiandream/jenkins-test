@@ -44,7 +44,7 @@ const Footer = (props) => {
     [checkAllItem, cancelAllCheckItem, items]
   )
   // 控制全选按钮状态
-  if (checkedItemsArry.length === items.length) {
+  if (items.length>0 && checkedItemsArry.length === items.length) {
     isChecked = true
   } else {
     isChecked = false

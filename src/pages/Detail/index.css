@@ -1,4 +1,6 @@
 
 .detail{
   background-color: rgb(172, 238, 117);
+  display: flex;
+  justify-content: space-between;
 }

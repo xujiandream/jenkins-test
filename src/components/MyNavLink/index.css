@@ -1,0 +1,14 @@
+.navlink{
+  border-radius: 5px;
+  border: 1px solid purple;
+  background-color: thistle;
+  color: brown;
+  width: 60PX;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+.activeNavlink{
+  background-color: rgb(167, 33, 167);
+  color: red;
+}

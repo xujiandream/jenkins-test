@@ -8,7 +8,8 @@ import './index.css'
 import { Button, Checkbox } from 'antd'
 import { ItemContext } from '../../context'
 import PropTypes from 'prop-types'
-
+import { withRouter } from 'react-router-dom'
+// import MyNavLink from '../../components/MyNavLink'
 const Item = (props) => {
   console.log('Item--执行了');
   //对接收的props进行：类型、必要性的限制
@@ -49,12 +50,14 @@ const Item = (props) => {
     },
     [checkItem, cancelCheckItem, todoObj]
   )
-  // 更新选中数据
-  // if (checkedItemsArry.length !== items.length) {
-  //   const deitem = checkedItemsArry.filter(parentItem =>items.some(childItem => parentItem.id === childItem.id))
-  //   console.log('deitem', deitem);
-    
-  // }
+  // 点击跳转详情页
+  const toDetail = useCallback(
+    () => {
+      console.log('props:', props);
+      props.history.push('/test',todoObj.hobby)
+    },
+    [props,todoObj.hobby]
+  )
   return (
     <li className='item' >
       <span className='checkBox'>
@@ -65,7 +68,8 @@ const Item = (props) => {
         <span style={{ marginLeft: '40px' }}>爱好：{todoObj.hobby}</span>
       </span>
       <span className='buttonBox'>
-        <Button type="primary">详情</Button>
+        {/* <MyNavLink to='/test'>ID:{todoObj.id}</MyNavLink> */}
+        <Button type="primary" onClick={toDetail}>{todoObj.hobby}详情</Button>
         <Button danger onClick={deleteItem} style={{ marginLeft: '5px' }}>删除</Button>
       </span>
     </li>
@@ -77,4 +81,4 @@ export default connect(state => ({ checkedItemsArry: state.checkedItemsArry, ite
     checkItem,
     cancelCheckItem
   }
-)(Item)
+)(withRouter(Item))
