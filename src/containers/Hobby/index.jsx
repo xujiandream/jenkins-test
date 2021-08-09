@@ -14,7 +14,7 @@ import List from '../../components/List'
 import Detail from '../../pages/Detail'
 import Frontpage from '../../pages/Frontpage'
 const Hobby = (props) => {
-  console.log('Hobby--执行了');
+  console.log('Hobby--执行了1');
   const { addItem, deleteItem, items } = props
   const { Provider } = ItemContext
   // 添加新爱好
