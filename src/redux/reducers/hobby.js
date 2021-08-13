@@ -4,7 +4,8 @@
 */
 import {
   ADDITEM,
-  DELETEITEM
+  DELETEITEM,
+  UPDATEITEM
 } from '../constant'
 
 //初始化状态
@@ -37,6 +38,8 @@ export default function itemsReducer(preState = initState, action) {
     case ADDITEM: //如果是添加
       return [data, ...preState]
     case DELETEITEM: //若果是删除
+      return [...data]
+    case UPDATEITEM: //若果是更新
       return [...data]
     default:
       return preState

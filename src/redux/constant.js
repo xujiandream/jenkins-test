@@ -3,6 +3,7 @@
 */
 export const ADDITEM = 'addItem'
 export const DELETEITEM = 'deleteItem'
+export const UPDATEITEM = 'updateItem'
 export const ADDITEMTOCHECKEDARRAY = 'addItemToCheckedArray'
 export const DELETEITEMFROMCHECKEDARRAY = 'deleteItemFromCheckedArray'
 export const ADDAllITEMTOCHECKEDARRAY = 'addAllItemsToCheckedArray'

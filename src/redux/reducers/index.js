@@ -7,7 +7,6 @@ import {combineReducers} from 'redux'
 import items from './hobby'
 // 引入为Item组件服务的reducer
 import checkedItemsArry from './item'
-
 //汇总所有的reducer变为一个总的reducer
 export default combineReducers({
   items,
