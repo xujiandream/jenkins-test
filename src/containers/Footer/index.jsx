@@ -19,7 +19,6 @@ const Footer = (props) => {
     deleteHobby
   } = props
   
-  console.log("Footer--items:", items.length, "checkedItemsArry", checkedItemsArry.length);
   const footerRef = useRef()
   footerRef.current = { isChecked: false, btnDisabled: true }
   let { isChecked, btnDisabled } = footerRef.current

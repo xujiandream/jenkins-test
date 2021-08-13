@@ -53,7 +53,6 @@ const Item = (props) => {
   // 点击跳转详情页
   const toDetail = useCallback(
     () => {
-      console.log('props:', props);
       props.history.push('/test',todoObj.hobby)
     },
     [props,todoObj.hobby]

@@ -3,7 +3,6 @@ import './index.css'
 import { Button } from 'antd';
 export default function Detail(props) {
   console.log('datail组件被执行了');
-  console.log(props);
   const { state } = props.location
   const goForward = useCallback(
     () => {
