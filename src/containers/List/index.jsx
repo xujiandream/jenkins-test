@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import React, { useEffect } from 'react'
 // import PropTypes from 'prop-types'
 import './index.css'
-import Item from '../../containers/Item'
+import Item from '../Item'
 import Sortable from 'sortablejs'
 //对接收的props进行：类型、必要性的限制
 /* List.propTypes = {

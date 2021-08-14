@@ -1,0 +1,43 @@
+.logo{
+  font-weight: 800;
+  font-size: 30px;
+  height: 64px;
+  line-height: 64px;
+  color: #ffffff;
+}
+.welcome div {
+  width: 100%;
+  height: 100%;
+  font-weight: 500;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+}
+.Shell{
+  width: 100%;
+  height: 100%;
+}
+.site-layout-background{
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+.topRow{
+  height: 100%;
+  width: 100%;
+}
+.site-layout-background .ant-breadcrumb{
+  background-color: #0FDEF2;
+  border: 1px solid;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: left;
+  padding-left: 10px;
+}
+.collapsedBtn{
+  margin: 0px 0 6px 0
+}
+.collapsedBtn button{
+  width: 100%;
+}

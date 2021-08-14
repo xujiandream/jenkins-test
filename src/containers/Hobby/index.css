@@ -2,3 +2,7 @@
   background-color: aquamarine;
   padding: 10px;
 }
+.hobbyBox{
+  display: flex;
+  flex-direction: column;
+}

@@ -1,10 +1,12 @@
 import React from 'react'
-import Hobby from './containers/Hobby'
+// 引入外壳组件
+import Shell from './components/Shell'
 import './App.css'
+
 export default function App() {
   return (
     <>
-        <Hobby />
+      <Shell />  
     </>
   )
 }
